@@ -6,10 +6,10 @@
     <title>Tabela de Jogos</title>
 </head>
 <body>
-    <center><h1>CLASSIFICAÇÃO</h1></center>
-   <center><h2>~ RODADA 01 ~</h2></center>
+    <h1>CLASSIFICAÇÃO</h1>
+   <h2>~ RODADA 01 ~</h2>
 
-   <center><table border="1" cellpadding="10"></center>
+   <table border="1" cellpadding="10">
     <thead>
         <tr>
             <th>Ordem</th>
@@ -21,32 +21,96 @@
 
     <tbody>
         <tr>
-            <td><center><h1>01</h1></center></td>
+            <td><h1>01</h1></td>
             <td><img src="flamengo.png" alt="Escudo do time Flamengo" width="50"></td>
             <td><h1>3</h1></td>
             <td><h1>3</h1></td>
         </tr>
 
         <tr>
-            <td><center><h1>02</h1></center></td>
+            <td><h1>02</h1></td>
             <td><img src="fluminense.png" alt="Escudo do time Fluminense" width="50"></td>
             <td><h1>3</h1></td>
             <td><h1>3</h1></td>
         </tr>
 
         <tr>
-            <td><center><h1>03</h1></center></td>
+            <td><h1>03</h1></td>
             <td><img src="palmeiras.png" alt="Escudo do time Palmeiras" width="50"></td>
             <td><h1>3</h1></td>
             <td><h1>3</h1></td>
         </tr>
 
         <tr>
-            <td><center><h1>04</h1></center></td>
+            <td><h1>04</h1</td>
             <td><img src="santos.png" alt="Escudo do time Santos" width="50"></td>
             <td><h1>3</h1></td>
             <td><h1>3</h1></td>
         </tr>
     </tbody>
+         </table>
+
+    <h1>Responda</h1>
+
+    <form method="POST" action="processar.php">
+
+        <fieldset>
+            <legend>Dados do seu time</legend>
+
+            <label for="time">Qual seu time:</label>
+            <input type="text" id="time" name="time" required>
+
+            <br></br>
+
+            <label for="mundial">Seu time tem mundial:</label>
+            <input type="text" id="mundial" name="mundial" required>
+
+            <br></br>
+
+            <label for="titulos">Quantos títulos brasileiros seu time possui:</label>
+            <input type="number" id="titulos" name="titulos" min="0" max="100" required>
+
+            <br></br>
+
+            <label for="comentario">Deixe seu comentário:</label>
+            <input type="text" id="comentario" name="comentario" required>
+        </fieldset>
+
+        <br></br>
+
+        <fieldset>
+            <legend>Estou feliz</legend>
+
+            <input type="checkbox" id="feliz" name="feliz">
+            <label for="feliz">Sou feliz</label>
+
+            <input type="checkbox" id="infeliz" name="infeliz">
+            <label for="infeliz">Não sou feliz</label>
+
+            <input type="checkbox" id="alegre" name="alegre">
+            <label for="alegre">Sou muito alegre</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pagamento</legend>
+
+            <input type="checkbox" id="credito" name="credito">
+            <label for="credito">Cartão de Crédito</label>
+
+            <input type="checkbox" id="debito" name="debito">
+            <label for="debito">Cartão de Débito</label>
+
+            <input type="checkbox" id="pix" name="pix">
+            <label for="pix">Pix</label>
+
+            <input type="checkbox" id="bombom" name="bombom">
+            <label for="bombom">Vale-Bombom</label>
+        </fieldset>
+
+        <br></br>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
 </body>
 </html>
