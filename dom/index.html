@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>DOM Devs ~</title>
+    <link hel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>olá mundo!</h1>
+    <button onclick= "mostrarMsg()" class="btn btn-primary">clique para ver um alerta</button>
+    <br></br>
+    <h1 id="devs-pro">texto original</h1>
+    <button onclick= "mudarTxt()" class="btn btn-dark">mudar o texto</button>
+    <button onclick= "voltarTxt()" class="btn btn-dark">voltar pro original</button>
+    
+    <br></br>
+
+    <h1 id="contador">contador: 0</h1>
+    <button onclick= "incrementar()" class="btn btn-success">incrementar</button>
+    <button onclick= "descrementar()" class="btn btn-success">decrementar</button>
+    <button onclick= "resetar()" class="btn btn-danger">resetar</button>
+
+</body>
+<script>
+    function mostrarMsg() {
+        alert("isso é um alerta :O");
+    }
+
+    function mudarTxt() {
+        document.getElementById("devs-pro").innerText = "o jogo :P";
+    }
+
+    function voltarTxt() {
+        document.getElementById("devs-pro").innerText = "texto original";
+    }
+
+    var contador = 0;
+
+    function incrementar() {
+        contador++;
+        document.getElementById("contador").innerText = "contador: " + contador;
+    }
+
+    function descrementar() {
+        contador--;
+        document.getElementById("contador").innerText = "contador: " + contador;
+    }
+
+    function resetar() {
+        contador = 0;
+        document.getElementById("contador").innerText = "contador: " + contador;
+    }
+    
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</html>
